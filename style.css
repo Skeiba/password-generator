@@ -155,7 +155,7 @@ body {
     cursor: pointer;
 }
 
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 396px) {
     .container{
         width: min(90%, 700px);
     }
