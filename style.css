@@ -170,9 +170,9 @@ body {
     
     .passwordInfo { 
         display: flex;
-        width: 17em;
+        width: 20em;
         align-items: center; 
-        gap: 5em;
+        gap: 8em;
     }
 
     .password-customization{
