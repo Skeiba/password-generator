@@ -25,10 +25,8 @@ body {
 .password-display {
     margin-bottom: 2em;
     background-color: var(--primary);
-    /* background: var(--red); */
     display: flex;
     border-radius: 0.5em;
-    /* gap: 1em; */
     justify-content: center;
     align-items: center;
 }
@@ -157,3 +155,33 @@ body {
     cursor: pointer;
 }
 
+@media screen and (max-width: 412px) {
+    .container{
+        width: min(90%, 700px);
+    }
+
+    .password-display{
+        flex-direction: column;
+    }
+    .password-text{
+        width: 19em;
+        height: 3.5em;
+    }
+    
+    .passwordInfo { 
+        display: flex;
+        width: 17em;
+        align-items: center; 
+        gap: 5em;
+    }
+
+    .password-customization{
+        flex-direction: column;
+        align-items:flex-start;
+    }
+    
+    .password-length input[type="range"] {
+        width: 80%;
+        margin-right: 1.5em;
+    }
+}
