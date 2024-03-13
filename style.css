@@ -1,0 +1,159 @@
+@import "variables.css";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--poppins);
+}
+
+body {
+    background: black;
+}
+
+.container {
+    width: min(90%, 700px);
+    padding: 20px;
+    background: var(--dark);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.5em;
+}
+
+.password-display {
+    margin-bottom: 2em;
+    background-color: var(--primary);
+    /* background: var(--red); */
+    display: flex;
+    border-radius: 0.5em;
+    /* gap: 1em; */
+    justify-content: center;
+    align-items: center;
+}
+
+.password-text {
+    font-weight: 600;
+    width: 25em;
+    height: 4em;
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.5em;
+    font-size: 17px;
+    outline: none;
+    color: var(--dark);
+    background-color: transparent;
+}
+
+.password-strength{
+    font-weight: 600;
+    font-size: 16px;
+    white-space: nowrap;
+    color: var(--dark-green);
+}
+
+
+.password-actions {
+    display: flex;
+}
+
+.functionalityButton {
+    background-color: transparent;
+    color: var(--dark);
+    border: none;
+    padding: 0.25em 0.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.functionalityButton:hover {
+    transform: translateY(-4px) translateX(-2px);
+}
+.functionalityButton:active {
+    transform: translateY(2px) translateX(1px);
+}
+
+.password-generator-form {
+    margin: 20px;
+    color: var(--text1);
+}
+
+.password-generator-form h2 {
+    margin-bottom: 1em;
+}
+
+.password-length {
+    margin-bottom: 1em;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.password-length input[type="range"] {
+    width: 90%;
+    margin-right: 1.5em;
+}
+
+.password-customization {
+    display: flex;
+    margin-bottom: 10px;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox-container{
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom-checkbox{
+    position: relative; 
+    height: 1.5em;
+    width: 1.5em;
+    cursor: pointer;
+}
+
+.custom-checkbox::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.custom-checkbox:checked::before {
+    background-color: var(--green); 
+}
+
+.custom-checkbox::after {
+    content: "\02713"; 
+    font-size: 18px; 
+    color: white;
+    display: none;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+  
+.custom-checkbox:checked::after {
+    display: inline-block;
+}
+
+.checkbox-label{
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+

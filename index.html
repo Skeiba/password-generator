@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <script src="code.js" defer></script>
+</head>
+<body>
+  <div class="container">  
+    <div class="password-display">   
+        <form id="password-form" class="password-form">  
+            <input type="text" id="password-text" class="password-text" placeholder="Generate password" readonly>
+        </form>
+        <div class="password-actions">  
+            <button id="copy-button" class="functionalityButton" title="copy">
+                <i class="fa-regular fa-copy"></i>
+            </button>
+            <span id="copy-message" class="copy-message" style="display: none; position: absolute; top: -30px; font-weight: 500; background-color: rgba(255, 255, 255, 0.748); padding: 0.5em; border-radius: 0.5em;">Copied!</span>
+            <button id="generate-button" class="functionalityButton" title="generate">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </button>
+        </div>
+        <div class="password-strength">
+            <span id="strenght-label">Very strong</span>
+        </div>
+    </div>
+    <form class="password-generator-form">  
+        <h2>Password Options</h2>
+        <div class="password-length">  
+            <label for="passwordLength">Password Length:</label>
+            <input type="range" id="passwordLength" min="8" max="30">
+            <span id="passwordLengthValue"></span>
+        </div>
+        <div class="password-customization">  
+            <div class="checkbox-container">
+                <input type="checkbox" id="uppercaseLetters" class="custom-checkbox" checked>
+                <label for="uppercaseLetters" class="checkbox-label">Uppercase</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="lowercaseLetters" class="custom-checkbox" checked>
+                <label for="lowercaseLetters" class="checkbox-label">Lowercase</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="numbers" class="custom-checkbox" checked>
+                <label for="numbers" class="checkbox-label">Numbers</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="specialCharacters" class="custom-checkbox">
+                <label for="specialCharacters" class="checkbox-label">Symbols</label>
+            </div>
+        </div>        
+    </form>
+  </div>
+</body>
+</html>
