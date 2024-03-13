@@ -30,6 +30,11 @@ body {
     justify-content: center;
     align-items: center;
 }
+.passwordInfo{
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+}
 
 .password-text {
     font-weight: 600;
@@ -169,7 +174,6 @@ body {
     }
     
     .passwordInfo { 
-        display: flex;
         width: 20em;
         align-items: center; 
         gap: 8em;
