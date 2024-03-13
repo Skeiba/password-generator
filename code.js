@@ -79,21 +79,28 @@ function getPasswordStrength(){
     let password = getPassword();
     let strength = 0;
 
-    if (password.length >= 16){
-        strength++;
+    let chars = {
+        numbers: /\d/,
+        lowerCase: /[a-z]/,
+        upperCase: /[A-Z]/,
+        special: /[^a-zA-Z0-9]/
+    };
+
+    if (password.length >= 8 && password.length <= 20) {
+        strength += 1;
+    } 
+    else if (password.length > 20) {
+        strength += 2;
     }
-    if (/[A-Z]/.test(password)){
-        strength++;
+
+    let count = 0;
+    for (let key in chars){
+        if(chars[key].test(password)){
+            count++; 
+        }
     }
-    if (/[a-z]/.test(password)){ 
-        strength++;
-    }
-    if (/\d/.test(password)){ 
-        strength++;
-    }
-    if (/[!@#$%^&*()_+\-=[\]{}|;:',.<>?]/.test(password)){
-        strength++;
-    }
+    strength += count;
+
     return strength;
 }
 
