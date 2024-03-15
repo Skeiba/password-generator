@@ -83,14 +83,14 @@ function getPasswordStrength(){
         numbers: /\d/,
         lowerCase: /[a-z]/,
         upperCase: /[A-Z]/,
-        special: /[^a-zA-Z0-9]/
+        specialChars : /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/
     };
 
     if (password.length >= 8 && password.length <= 20) {
         strength += 1;
     } 
     else if (password.length > 20) {
-        strength += 2;
+        strength += 1;
     }
 
     let count = 0;
